@@ -25,4 +25,4 @@ EXPOSE 443
 # run webshell gateone server
 WORKDIR /opt/gateone
 ENV IP_ADDRESS 127.0.0.1
-CMD python /opt/gateone/gateone.py --address=$IP_ADDRESS --origins=$IP_ADDRESS
+CMD python /opt/gateone/gateone.py --address=$IP_ADDRESS --origins=https://$IP_ADDRESS
