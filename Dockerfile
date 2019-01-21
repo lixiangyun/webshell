@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 MAINTAINER lixiangyun "linimbus@126.com"
 
 RUN apt-get update 
-RUN apt-get -q install -y curl python wget
+RUN apt-get -q install -y curl python wget vim ssh
 
 # install pip tools
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
