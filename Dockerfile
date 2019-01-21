@@ -21,5 +21,5 @@ WORKDIR /opt/GateOne
 RUN python setup.py install
 
 # run webshell gateone server
-WORKDIR /opt/GateOne/gateone
-CMD /opt/GateOne/gateone.py
+WORKDIR /opt/gateone
+CMD /opt/gateone/gateone.py
