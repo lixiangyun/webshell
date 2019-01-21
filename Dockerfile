@@ -20,4 +20,6 @@ RUN tar -zxvf gateone-1.1.tar.gz
 WORKDIR /opt/GateOne
 RUN python setup.py install
 
-CMD ./gateone.py
+# run webshell gateone server
+WORKDIR /opt/GateOne/gateone
+CMD /opt/GateOne/gateone.py
