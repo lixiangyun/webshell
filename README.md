@@ -52,15 +52,26 @@ https://192.168.0.111:443
 ### i.本地docker构建镜像&启动
 ```
 docker build -t webshell .
-docker run -d --net=host --restart=always -e IP_ADDRESS=192.168.0.111 webshell
+docker run -d --net=host --restart=always -e IP_ORIGINS=192.168.0.111 webshell
 ```
 
 ### ii.默认dockerhub下载镜像&启动
 ```
-docker run -d --net=host --restart=always -e IP_ADDRESS=192.168.0.111 linimbus/webshell
+docker run -d --net=host --restart=always -e IP_ORIGINS=192.168.0.111 linimbus/webshell
 ```
 
-### iii.访问测试
+使用浏览器打开
 ```
 https://192.168.0.111:443
+```
+
+### iii. 绑定域名方式
+
+```
+docker run -d --net=host --restart=always -e IP_ORIGINS=you.domain.com linimbus/webshell
+```
+
+使用浏览器打开
+```
+https://you.domain.com:443
 ```
